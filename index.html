@@ -4,26 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Project tracking intro component</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .color{
+      color: #242942;
+     color: #5b5f71;
+     color: #a0a1ac;
+     color: #eef3f6;
+     color: #ff5c5cd8
+    }
+    
   </style>
 </head>
-<body>
-  Product
-  Features
-  Pricing
-  Login
-
-  New
-  Monograph Dashboard
-
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
-
-  Schedule a demo
-  to see a live preview
+<body class="pt-24 w-9/12 m-auto">
+  <div class="absolute w-6/12 bg-[#eef3f6] rounded-bl-[30px] h-3/6 top-0 right-0 z-10"></div>
+  <nav class="flex justify-between items-center pb-24 relative z-30">
+    <img src="images/logo.svg" alt="logo">
+    <div class="flex gap-[30px] items-center">
+      <ul class="flex gap-[20px]">
+        <li class="uppercase font-['Barlow_Condensed'] text-[#242942] font-[700] cursor-pointer hover:underline">Product</li>
+        <li class="uppercase font-['Barlow_Condensed'] text-[#242942] font-[700] cursor-pointer hover:underline">Features</li>
+        <li class="uppercase font-['Barlow_Condensed'] text-[#242942] font-[700] cursor-pointer hover:underline">Pricing</li>
+      </ul>
+      <div class="border-2 rounded-full border-[#a0a1ac]"></div>
+      <button class="uppercase font-['Barlow_Condensed'] text-[#242942 cursor-pointer hover:underline">Login</button>
+    </div>
+  </nav>
+  <div class="flex">
+    <div class="w-5/12">
+      <div class="flex mb-8 items-center">
+        <p class="px-3 py-px mr-4 uppercase bg-[#242942] rounded-3xl text-[#eef3f6]">New</p>
+        <p class="text-[#a0a1ac] uppercase tracking-[3px] font-['Barlow_Condensed'] text-[11px]">Monograph Dashboard</p>
+      </div>
+      <h2 class="text-[55px] text-[#242942] mb-8 font-[700] uppercase leading-none font-['Barlow_Condensed']">
+        Powerful insights into your team
+      </h2>
+      <p class="text-[#5b5f71] text-[15px] w-7/12 mb-24 font-['Barlow']">Project planning and time tracking for agile teams</p>
+      <div class="flex items-center">
+        <button class="bg-[#ff5c5c] px-5 py-2 mr-4 text-[#eef3f6] font-['Barlow_Condensed'] uppercase hover:bg-[#ff5c5cd8] rounded-[5px]">Schedule a demo</button>
+        <p  class="text-[#a0a1ac] uppercase tracking-[3px] text-[11px] font-['Barlow_Condensed']">to see a live preview</p>
+      </div>
+    </div>
+    <div class="w-7/12 relative z-30 pl-[300px]">
+      <img src="images/illustration-devices.svg" alt="" class="">
+    </div>
+  </div>
   
   <footer>
     <p class="attribution">
@@ -31,5 +62,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
