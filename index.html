@@ -22,46 +22,129 @@
     
   </style>
 </head>
-<body class="pt-24 w-9/12 m-auto">
-  <div class="absolute w-6/12 bg-[#eef3f6] rounded-bl-[30px] h-3/6 top-0 right-0 z-10"></div>
-  <nav class="flex justify-between items-center pb-24 relative z-30">
+<body class="pt-24 body">
+  <div class="absolute w-6/12 bg-[#eef3f6] rounded-bl-[30px] h-3/6 top-0 right-0 z-10 displaced"></div>
+  <nav class="flex justify-between items-center pb-24 w-9/12 m-auto relative z-[100] nav-link">
     <img src="images/logo.svg" alt="logo">
-    <div class="flex gap-[30px] items-center">
-      <ul class="flex gap-[20px]">
-        <li class="uppercase font-['Barlow_Condensed'] text-[#242942] font-[700] cursor-pointer hover:underline">Product</li>
-        <li class="uppercase font-['Barlow_Condensed'] text-[#242942] font-[700] cursor-pointer hover:underline">Features</li>
-        <li class="uppercase font-['Barlow_Condensed'] text-[#242942] font-[700] cursor-pointer hover:underline">Pricing</li>
+    <img src="images/icon-hamburger.svg" alt="" class="hidden hamburger cursor-pointer" id="openNav">
+    <img src="images/icon-close.svg" alt="" class="hidden close cursor-pointer" id="closeNav">
+    <div class="flex gap-[30px] items-center nav relative z-30" id="nav">
+      <ul class="flex gap-[20px] link">
+        <li class="uppercase font-['Barlow_Condensed'] text-[#242942] font-[700] cursor-pointer hover:underline links">Product</li>
+        <li class="uppercase font-['Barlow_Condensed'] text-[#242942] font-[700] cursor-pointer hover:underline links">Features</li>
+        <li class="uppercase font-['Barlow_Condensed'] text-[#242942] font-[700] cursor-pointer hover:underline links">Pricing</li>
       </ul>
-      <div class="border-2 rounded-full border-[#a0a1ac]"></div>
+      <div class="border-2 rounded-full border-[#a0a1ac] line"></div>
       <button class="uppercase font-['Barlow_Condensed'] text-[#242942 cursor-pointer hover:underline">Login</button>
     </div>
   </nav>
-  <div class="flex">
-    <div class="w-5/12">
-      <div class="flex mb-8 items-center">
-        <p class="px-3 py-px mr-4 uppercase bg-[#242942] rounded-3xl text-[#eef3f6]">New</p>
+  <div class="flex ml-[170px] mb-[30px] reverse">
+    <div class="w-5/12 section-one">
+      <div class="flex mb-8 items-center head">
+        <p class="px-3 py-px mr-4 uppercase bg-[#242942] rounded-3xl text-[#eef3f6] ">New</p>
         <p class="text-[#a0a1ac] uppercase tracking-[3px] font-['Barlow_Condensed'] text-[11px]">Monograph Dashboard</p>
       </div>
-      <h2 class="text-[55px] text-[#242942] mb-8 font-[700] uppercase leading-none font-['Barlow_Condensed']">
+      <h2 class="text-[55px] text-[#242942] mb-8 font-[700] uppercase leading-none font-['Barlow_Condensed'] heading">
         Powerful insights into your team
       </h2>
-      <p class="text-[#5b5f71] text-[15px] w-7/12 mb-24 font-['Barlow']">Project planning and time tracking for agile teams</p>
-      <div class="flex items-center">
-        <button class="bg-[#ff5c5c] px-5 py-2 mr-4 text-[#eef3f6] font-['Barlow_Condensed'] uppercase hover:bg-[#ff5c5cd8] rounded-[5px]">Schedule a demo</button>
+      <p class="text-[#5b5f71] text-[15px] w-7/12 mb-24 font-['Barlow'] body2">Project planning and time tracking for agile teams</p>
+      <div class="flex items-center marg">
+        <button class="bg-[#ff5c5c] px-5 py-2 mr-4 text-[#eef3f6] font-['Barlow_Condensed'] uppercase hover:bg-[#ff5c5cd8] rounded-[5px] btn">Schedule a demo</button>
         <p  class="text-[#a0a1ac] uppercase tracking-[3px] text-[11px] font-['Barlow_Condensed']">to see a live preview</p>
       </div>
     </div>
-    <div class="w-7/12 relative z-30 pl-[300px]">
-      <img src="images/illustration-devices.svg" alt="" class="">
+   
+    <div class="relative z-30">
+      <img src="images/illustration-devices.svg" alt="" class="w-7/12 relative image">
     </div>
   </div>
   
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/pezzyace" target="_blank"">Peace Akaehomen</a>.
     </p>
   </footer>
+
+  <style>
+    mar{
+      margin-right: -100px;
+    }
+    @media(width <= 375px){
+      .body{
+        padding-top: 30px;
+      }
+      .reverse{
+        flex-direction: column-reverse;
+        margin: 0;
+      }
+      .section-one{
+        width: 90%;
+        margin: 0 auto;
+      }
+      .displaced{
+        height: 320px;
+        width: 50%;
+      }
+      .nav{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        top: 50px;
+        z-index: 100;
+        padding: 20px 0;
+        gap: 20px;
+      }
+      .link{
+        flex-direction: column;
+        align-items: center;
+        
+      }
+      .line{
+        width: 80%;
+        border: 0.1px solid #eef3f6;
+      }
+      .hamburger{
+        display: inline-flex;
+      }
+      .image{
+        position: relative;
+        width: 100%;
+        margin-right: -200px;
+        margin-bottom: 80px;
+        display: flex;
+      }
+      .nav-link{
+        padding-bottom: 40px;
+      }
+      .head{
+        margin-bottom: 10px;
+      }
+      .heading{
+        font-size: 40px;
+        margin-bottom: 13px;
+      }
+      .close{
+        display: none;
+      }
+      .body2{
+        width: 80%;
+        margin-bottom: 20px;
+        padding: 0;
+      }
+      .btn{
+        width: 40%;
+      }
+      .marg{
+        margin-bottom: 20px;
+      }
+    }
+  </style>
   <script src="script.js"></script>
 </body>
 </html>
